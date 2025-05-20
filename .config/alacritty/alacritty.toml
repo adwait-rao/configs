@@ -1,0 +1,158 @@
+# Alacritty Configuration File (Version 0.13.2)
+#
+# For more information, consult the Alacritty README or the man page.
+#
+# The default location for this file is ~/.config/alacritty/alacritty.toml
+#
+# This example configuration is tailored for a "rice" setup, focusing on
+# aesthetics and usability.
+
+# Import a color scheme (optional, but recommended for easy theming)
+#
+# You can choose one from a collection like:
+#   - https://github.com/alacritty/alacritty-theme
+#   - https://github.com/catppuccin/alacritty
+#
+# To use a theme, download the .toml file and import it here.
+# Example:
+# import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+
+# Configuration starts here:
+[window]
+# Window dimensions
+#
+# If you prefer to start Alacritty in a specific size, uncomment these
+# lines and set the width and height in pixels.
+dimensions = { columns = 80, lines = 25 }
+#
+# Window padding
+#
+# Adjust the padding to your liking.  This adds space around the text
+# within the window.
+# padding = { x = 20, y = 20 }
+#
+# Window opacity
+#
+# Set the window opacity. A value of 1.0 is fully opaque. Values
+# less than 1.0 will make the window transparent. This requires
+# a compositor on Linux.
+opacity = 1
+#
+# Window decorations
+#
+# Available options:
+#   - "None": No decorations
+#   - "Full": Show all decorations
+decorations = "Full" # Corrected value for window decorations
+
+[font]
+# Font family
+#
+# The `normal` font family is used for regular text.  The `bold`,
+# `italic`, and `bold_italic` families are used for the
+# corresponding text styles.  If a style is not specified,
+# Alacritty will try to use a variant of the `normal` font.
+#
+# Use `fc-list` in your terminal to list available fonts.  A popular
+# choice for "rice" setups is a Nerd Font, which includes icons.
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+#
+# Font size
+#
+# The font size is specified in points.
+size = 16
+#
+# Font offset
+#
+# Adjust the font offset if you notice that characters are not
+# perfectly centered within their cells.
+offset = { x = 0, y = 0 }
+
+[colors]
+# Colors
+#
+# Alacritty uses a color scheme to define the colors used in the
+# terminal.  You can either define the colors here directly, or
+# import a color scheme as shown at the beginning of this file.
+#
+# If you're not using a theme, you can customize the colors here.
+# Example (using the same colors as the Catppuccin Mocha theme):
+# primary = { background = "#1E1E2E", foreground = "#CDD6F4" }
+# cursor = { text = "#1E1E2E", cursor = "#F5E0DC" }
+# selection = { text = "#1E1E2E", background = "#F5E0DC" }
+# normal = {
+#   black = "#45475A",
+#   red = "#F38BA8",
+#   green = "#A6E3A1",
+#   yellow = "#F9E2AF",
+#   blue = "#89B4FA",
+#   magenta = "#F5C2E7",
+#   cyan = "#94E2D5",
+#   white = "#BAC2DE",
+# }
+# # Bright versions of the normal colors
+# bright = {
+#   black = "#585B70",
+#   red = "#F38BA8",
+#   green = "#A6E3A1",
+#   yellow = "#F9E2AF",
+#   blue = "#89B4FA",
+#   magenta = "#F5C2E7",
+#   cyan = "#A6ADC8",
+# }
+#
+# # Dim versions of the normal colors
+# dim = {
+#     black = "#45475A",
+#     red = "#F38BA8",
+#     green = "#A6E3A1",
+#     yellow = "#F9E2AF",
+#     blue = "#89B4FA",
+#     magenta = "#F5C2E7",
+#     cyan = "#94E2D5",
+#     white = "#BAC2DE",
+# }
+#
+# The color scheme is very important for the overall look of your
+# terminal.  Take some time to find one you like, or create your own!
+
+[cursor]
+# Cursor style
+#
+# Available shapes:
+#   - "Block": A solid block
+#   - "Beam": A vertical line
+#   - "Underline": A horizontal line under the character
+style = "Beam" # Or "Block" or "Underline"
+
+# [mouse]
+# enabled = true
+
+[scrolling]
+# Maximum number of lines in the scrollback buffer.
+history = 10000
+
+# Multiplier for the number of lines scrolled per mouse wheel tick.
+multiplier = 3
+
+[keyboard]
+# Keybindings
+#
+# You can customize Alacritty's keybindings here.  The following
+# are some useful examples.  For a full list of available actions,
+# see the Alacritty documentation.
+bindings = [
+  # Copy and paste
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  # Zoom
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "0", mods = "Control", action = "ResetFontSize" },
+  # Create a new window in the same directory.
+  { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" },
+]
+
