@@ -113,3 +113,4 @@ export PATH="$PATH:/home/adwaitrao/go/bin"
 
 alias tmux='tmux -u'
 export PATH=$HOME/.local/bin:$PATH
+

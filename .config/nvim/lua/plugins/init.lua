@@ -8,8 +8,35 @@ return {
   {
     'IogaMaster/neocord',
     event = "VeryLazy",
-    config = function (_, opts)
+    config = function(_, opts)
       require("neocord").setup(opts)
+    end
+  },
+
+  {
+    'xiyaowong/transparent.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Optional, you don't have to run setup.
+      require("transparent").setup({
+        -- table: default groups
+        groups = {
+          'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+          'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+          'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+          'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
+          'EndOfBuffer',
+        },
+        -- table: additional groups that should be cleared
+        extra_groups = {},
+        -- table: groups you don't want to clear
+        exclude_groups = {},
+        -- function: code to be executed after highlight groups are cleared
+        -- Also the user event "TransparentClear" will be triggered
+        on_clear = function() end,
+      })
+      require('transparent').clear_prefix('NvimTree')
     end
   },
 
@@ -33,17 +60,17 @@ return {
       require("dap-go").setup(opts)
     end
   },
-{
-  "olexsmir/gopher.nvim",
-  ft = "go",
-  -- branch = "develop"
-  -- (optional) will update plugin's deps on every update
-  build = function()
-    vim.cmd.GoInstallDeps()
-  end,
-  ---@type gopher.Config
-  opts = {},
-},
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    -- branch = "develop"
+    -- (optional) will update plugin's deps on every update
+    build = function()
+      vim.cmd.GoInstallDeps()
+    end,
+    ---@type gopher.Config
+    opts = {},
+  },
 
   {
     "nvimtools/none-ls.nvim",

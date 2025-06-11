@@ -36,7 +36,7 @@ dimensions = { columns = 80, lines = 25 }
 # Set the window opacity. A value of 1.0 is fully opaque. Values
 # less than 1.0 will make the window transparent. This requires
 # a compositor on Linux.
-opacity = 1
+opacity = 0.95
 #
 # Window decorations
 #
@@ -63,7 +63,7 @@ bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 # Font size
 #
 # The font size is specified in points.
-size = 16
+size = 13.5
 #
 # Font offset
 #
