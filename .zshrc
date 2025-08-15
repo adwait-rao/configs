@@ -114,3 +114,16 @@ export PATH="$PATH:/home/adwaitrao/go/bin"
 alias tmux='tmux -u'
 export PATH=$HOME/.local/bin:$PATH
 
+
+# bun completions
+[ -s "/home/adwaitrao/.bun/_bun" ] && source "/home/adwaitrao/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"

@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "ashes",
+	theme = "tundra",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -16,7 +16,7 @@ M.base46 = {
 
 M.mason = {
   pkgs = {
-    "typescript-language-server", "tailwindcss-language-server", "eslint-lsp", "prettierd"
+    "typescript-language-server", "tailwindcss-language-server", "eslint-lsp", "prettierd", "nomicfoundation-solidity-language-server"
   },
 }
 
